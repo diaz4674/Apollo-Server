@@ -1,7 +1,16 @@
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
-const twitScrapeDb = new Sequelize(`${process.env.TWEET_DB}`);
+const twitScrapeDb = new Sequelize(
+  process.env.DATABASE,
+  process.env.USER,
+  // "postgres",
+  "number1",
+  // process.env.PASSWORD,
+  {
+    dialect: "postgres",
+  }
+);
 
 twitScrapeDb
   .authenticate()
