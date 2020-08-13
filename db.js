@@ -3,8 +3,8 @@ require("dotenv").config();
 
 const twitScrapeDb = new Sequelize(
   process.env.DATABASE,
-  process.env.USER,
-  process.env.PASSWORD,
+  process.env.DB_USER,
+  process.env.DB_PASS,
   {
     dialect: "postgres",
   }
